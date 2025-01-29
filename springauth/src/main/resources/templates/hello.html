@@ -3,11 +3,17 @@
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
     <head>
         <title>Hello World!</title>
+        <link href="css/hello.css" rel="stylesheet">
     </head>
     <body>
         <h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
-        </form>
+        <div id="nav">
+            <form sec:authorize="hasRole('ROLE_ADMIN')" action="/admin">
+                <input type="submit" value="To Admin Dashboard" />
+            </form>
+            <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Sign Out"/>
+            </form>
+        </div>
     </body>
 </html>

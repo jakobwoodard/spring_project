@@ -1,0 +1,97 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; /* Light beige background */
+    margin: 0;
+    padding: 0;
+    display: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the login form */
+form {
+    background-color: #FFFAF0; /* Light warm color for the form container */
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #8B4513; /* Warm brown */
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    font-size: 14px;
+    color: #D2691E; /* Chocolate color */
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #D2691E; /* Chocolate border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Input focus effect */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #FF7F50; /* Coral color when focused */
+    outline: none;
+    background-color: #FFF5EE; /* Light seashell color */
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background-color: #FF7F50; /* Warm coral color */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button[type="submit"]:hover {
+    background-color: #FF6347; /* Tomato color on hover */
+}
+
+/* Additional spacing for the form elements */
+div {
+    margin-bottom: 15px;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 480px) {
+    .login-container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
